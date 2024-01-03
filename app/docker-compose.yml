@@ -5,7 +5,7 @@ services:
     container_name: ng_frontend
     build: ./frontend
     ports:
-      - 5000:5000
+      - 1000:1000
     platform: linux/x86_64
     working_dir: /app-frontend
     depends_on:
@@ -14,7 +14,7 @@ services:
     environment:
       - NEXT_PUBLIC_API_URL=http://localhost:3001
     healthcheck:
-      test: ["CMD", "lsof", "-t", "-i:5000"]
+      test: ["CMD", "lsof", "-t", "-i:1000"]
       timeout: 10s
       retries: 5
 
